@@ -20,16 +20,21 @@ The Titanic Survival Predictor uses an AI model based on the Random Forest class
 
 ## Getting Started
 
-```bash
+
 # Clone the repository:
-git clone https://github.com/your-username/titanic-survival-predictor.git
+```bash
+git clone https://github.com/ahmettalhabektas/Streamlit/tree/master/Titanic%20Streamlit 
+```
+
 
 # Install the required dependencies:
+```bash
 pip install -r requirements.txt
-
+```
 # Run the Streamlit app:
+```bash
 streamlit run app.py
-
+```
 # Open your web browser and access the app at `http://localhost:8501`.
 
 ## Project Structure
