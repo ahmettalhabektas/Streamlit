@@ -123,70 +123,22 @@ if lang == "English":
 
         success_control = False
 
-        if st.button("Randomizer 🎲"):
-            progress = st.empty()  # Create an empty element to update the progress bar
-            user_name_holder = "Random"
-            user_surname_holder = "Passenger"
-            pclass_holder = random.choice([1, 2, 3])
-            age_holder = random.randint(1, 85)
-            sib_holder = random.randint(0, 5)
-            sp_holder = random.randint(0, 5)
-            par_holder = random.randint(0, 5)
-            ch_holder = random.randint(0, 5)
-            sex_holder = random.choice([0, 1])
-            min_fare = titanic.loc[titanic["Pclass"] == pclass_holder, "Fare"].min()
-            max_fare = titanic.loc[titanic["Pclass"] == pclass_holder, "Fare"].max()
-            fare_holder = random.uniform(min_fare, max_fare)
-            embarked_holder = random.randint(0, 2)
-            deck_options = titanic.loc[titanic["Pclass"] == pclass_holder, "Deck_letter"].unique().tolist()
-            deck_letter_holder = random.randint(0, len(deck_options) - 1)
-            # Define the total number of steps
-            total_steps = 10
-
-            # Define a list of loading characters (punctuation marks)
-            loading_chars = ["|", "/", "-", "\\"]
-            
-            # Iterate through steps and update the progress bar with loading animation
-            for step in range(total_steps):
-                progress.progress((step + 1) / total_steps)  # Update the progress bar
-
-                loading_char = loading_chars[step % len(loading_chars)]  # Cycle through loading characters
-
-                # Provide a descriptive message to inform the user about the progress
-                progress.text(f"Step {step + 1}/{total_steps}: Creating random values{loading_char}")
-
-                # Simulate a pause to make the loading animation noticeable
-                time.sleep(0.3)
-
-            # After the loop is done, clear the progress bar
-            progress.empty()
-
-            # Inform the user that random values are created
-            st.success("Random values have been created successfully!")
-
-
     
-        else:
-            user_name_holder = ""
-            user_surname_holder = ""
-            pclass_holder = 1
-            age_holder = 0
-            sib_holder = 0
-            sp_holder = 0
-            par_holder = 0
-            ch_holder =0
-            sex_holder = 0
-            fare_holder = 0
-            embarked_holder = 0
-            deck_letter_holder = 0
+            
+        user_name_holder = ""
+        user_surname_holder = ""
+        pclass_holder = 1
+        age_holder = 0
+        sib_holder = 0
+        sp_holder = 0
+        par_holder = 0
+        ch_holder = 0
+        sex_holder = 0
+        fare_holder = 0
+        embarked_holder = 0
+        deck_letter_holder = 0
 
-
-
-
-
-
-
-
+ 
 
 
 
@@ -447,60 +399,18 @@ else:
 
 
 
-        if st.button("Rastgele Değerler Oluştur 🎲"):
-            progress = st.empty()  # İlerleme çubuğunu güncellemek için boş bir öğe oluşturun
-            user_name_holder = "Rastgele"
-            user_surname_holder = "Yolcu"
-            pclass_holder = random.choice([1, 2, 3])
-            age_holder = random.randint(1, 85)
-            sib_holder = random.randint(0, 5)
-            sp_holder = random.randint(0, 5)
-            par_holder = random.randint(0, 5)
-            ch_holder = random.randint(0, 5)
-            sex_holder = random.choice([0, 1])
-            min_fare = titanic.loc[titanic["Pclass"] == pclass_holder, "Fare"].min()
-            max_fare = titanic.loc[titanic["Pclass"] == pclass_holder, "Fare"].max()
-            fare_holder = random.uniform(min_fare, max_fare)
-            embarked_holder = random.randint(0, 2)
-            deck_options = titanic.loc[titanic["Pclass"] == pclass_holder, "Deck_letter"].unique().tolist()
-            deck_letter_holder = random.randint(0, len(deck_options) - 1)
-            
-            # Toplam adım sayısını belirleyin
-            total_steps = 10
-
-            # Bir yükleme karakterlerinin (noktalama işaretleri) listesini tanımlayın
-            loading_chars = ["|", "/", "-", "\\"]
-            
-            # Adımları işleyin ve yükleme animasyonunu güncelleyin
-            for step in range(total_steps):
-                progress.progress((step + 1) / total_steps)  # İlerleme çubuğunu güncelle
-
-                loading_char = loading_chars[step % len(loading_chars)]  # Yükleme karakterlerini sırayla kullanın
-
-                # Kullanıcıyı ilerleme hakkında bilgilendirmek için açıklayıcı bir mesaj sağlayın
-                progress.text(f"Adım {step + 1}/{total_steps}: Rastgele değerler oluşturuluyor {loading_char}")
-
-                # Yükleme animasyonunun fark edilebilir olması için bir bekleme süresi ekleyin
-                time.sleep(0.3)
-
-            # Döngü bittiğinde ilerleme çubuğunu temizleyin
-            progress.empty()
-
-            # Kullanıcıya rastgele değerlerin başarıyla oluşturulduğunu bildirin
-            st.success("Rastgele değerler başarıyla oluşturuldu!")
-        else:
-            user_name_holder = ""
-            user_surname_holder = ""
-            pclass_holder = 1
-            age_holder = 0
-            sib_holder = 0
-            sp_holder = 0
-            par_holder = 0
-            ch_holder = 0
-            sex_holder = 0
-            fare_holder = 0
-            embarked_holder = 0
-            deck_letter_holder = 0
+        user_name_holder = ""
+        user_surname_holder = ""
+        pclass_holder = 1
+        age_holder = 0
+        sib_holder = 0
+        sp_holder = 0
+        par_holder = 0
+        ch_holder = 0
+        sex_holder = 0
+        fare_holder = 0
+        embarked_holder = 0
+        deck_letter_holder = 0
 
 
         success_control = False
