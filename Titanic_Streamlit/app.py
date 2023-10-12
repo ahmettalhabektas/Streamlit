@@ -1,11 +1,12 @@
-import time
-import pandas as pd
-import streamlit as st
-import matplotlib.pyplot as plt
-import seaborn as sns
+
 import joblib
 import os
 import random
+import matplotlib.pyplot as plt
+import seaborn as sns
+import pandas as pd
+import streamlit as st
+
 # Set the page configuration
 st.set_page_config(
     page_title="🚢 Titanic Survival Predictor 🚢",
