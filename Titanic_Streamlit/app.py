@@ -37,24 +37,8 @@ css-cio0dv ea3mdgi1
 </style>
 """, unsafe_allow_html=True)
 
-try:
-    st.write('Trying with back slashes')
-    st.dataframe(pd.read_csv(r'.\\data\\titanic.csv'))
-except:
-    st.write('It didn\'t work with back slashes.')
-
-
-try:
-    st.write('Trying with forward slashes')
-    st.dataframe(pd.read_csv(r'/data/titanic.csv'))
-except:
-    st.write('It didn\'t work with forward slashes.')
-
-
-
-
 # Read the Titanic dataset
-CSV_PATH="./titanic.csv"
+CSV_PATH="titanic.csv"
 titanic = pd.read_csv(CSV_PATH)
 
 # Language selection
