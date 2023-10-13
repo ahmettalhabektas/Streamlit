@@ -54,7 +54,7 @@ except:
 
 
 # Read the Titanic dataset
-CSV_PATH="data/titanic.csv"
+CSV_PATH="./titanic.csv"
 titanic = pd.read_csv(CSV_PATH)
 
 # Language selection
