@@ -27,19 +27,12 @@ st.set_page_config(
     }
 )
 
-# Hide a CSS class
-st.markdown("""
-<style>
-css-cio0dv ea3mdgi1
-{
-    visibility: hidden;
-}
-</style>
-""", unsafe_allow_html=True)
-
 # Read the Titanic dataset
-CSV_PATH="titanic.csv"
-titanic = pd.read_csv(CSV_PATH)
+CSV_PATH = "titanic.csv"
+if os.path.exists(CSV_PATH) and os.access(CSV_PATH, os.R_OK):
+    titanic = pd.read_csv(CSV_PATH)
+else:
+    st.error(f"File '{CSV_PATH}' not found or cannot be read.")
 
 # Language selection
 lang = st.selectbox("🌐 Please select a language", options=( "🇬🇧 English","🇹🇷 Türkçe"))
