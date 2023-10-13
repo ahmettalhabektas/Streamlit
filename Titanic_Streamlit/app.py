@@ -38,7 +38,7 @@ css-cio0dv ea3mdgi1
 """, unsafe_allow_html=True)
 
 # Read the Titanic dataset
-CSV_PATH="data/plant_pos.csv"
+CSV_PATH="data/titanic.csv"
 titanic = pd.read_csv(CSV_PATH)
 
 # Language selection
