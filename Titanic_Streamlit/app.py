@@ -38,7 +38,7 @@ css-cio0dv ea3mdgi1
 """, unsafe_allow_html=True)
 
 # Read the Titanic dataset
-titanic = pd.read_csv("titanic.csv")
+titanic = pd.read_csv("data/titanic.csv")
 
 # Language selection
 lang = st.selectbox("🌐 Please select a language", options=( "🇬🇧 English","🇹🇷 Türkçe"))
