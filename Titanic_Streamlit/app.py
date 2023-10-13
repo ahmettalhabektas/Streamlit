@@ -46,7 +46,7 @@ except:
 
 try:
     st.write('Trying with forward slashes')
-    st.dataframe(pd.read_csv(r'data//titanic.csv'))
+    st.dataframe(pd.read_csv(r'data\titanic.csv'))
 except:
     st.write('It didn\'t work with forward slashes.')
 
