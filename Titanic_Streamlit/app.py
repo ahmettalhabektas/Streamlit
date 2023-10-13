@@ -1,11 +1,10 @@
-
-import joblib
 import os
 import random
 import matplotlib.pyplot as plt
 import seaborn as sns
 import pandas as pd
 import streamlit as st
+import pickle
 
 # Set the page configuration
 st.set_page_config(
@@ -227,7 +226,9 @@ if lang == "English":
 
             df[f"Deck_letter_{deck_letter}"] = 1
 
-            model = joblib.load("best_ran_model.pkl")
+            # Load the model from the pickle file
+            with open('model.pkl', 'rb') as file:
+                model = pickle.load(file)
 
             # Make predictions using the loaded model
             predictions = model.predict(df)
@@ -499,8 +500,9 @@ else:
 
             df[f"Deck_letter_{deck_letter}"] = 1
 
-            model = joblib.load("best_ran_model.pkl")
-
+            # Load the model from the pickle file
+            with open('model.pkl', 'rb') as file:
+                model = pickle.load(file)
             # Yüklenmiş modeli kullanarak tahminler yapın
             tahminler = model.predict(df)
 
