@@ -536,7 +536,7 @@ else:
 
             image_place = st.empty()
 
-            if predictions[0] == 0:
+            if tahminler[0] == 0:
                 st.write("🌊 Maalesef! Görünüşe göre cankurtaran botuna yetişemediniz. Ancak unutmayın, hepsi eğlence amaçlı!")
                 if dead_files:
                     chosen_dead_file = random.choice(dead_files)
@@ -545,7 +545,7 @@ else:
                 else:
                     st.warning("'dead' klasöründe bir dosya bulunamadı.")
 
-            elif predictions[0] == 1:
+            elif tahminler[0] == 1:
                 st.write("🎉 Tebrikler! Titanik macerasını sağ salim atlattınız! Şimdi, anlatacak heyecan verici hikayeler hayal edin!")
                 if alive_files:
                     chosen_alive_file = random.choice(alive_files)
