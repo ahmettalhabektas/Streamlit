@@ -329,16 +329,16 @@ if lang == "English":
         "If you have any questions or feedback about the Titanic Survival Predictor, feel free to contact me through the following channels:"
     )
     st.markdown(
-        "- 📧 Email: [atalhabektas@gmail.com](mailto:atalhabektas@gmail.com)"
+        "- 📧 [Email](mailto:atalhabektas@gmail.com)"
     )
     st.markdown(
-        "- 🔗 LinkedIn: [Ahmet Talha Bektaş](https://www.linkedin.com/in/ahmet-talha-bekta%C5%9F-056844216)"
+        "- 🔗 [LinkedIn](https://www.linkedin.com/in/ahmet-talha-bekta%C5%9F-056844216)"
     )
     st.markdown(
-        "- 💻 GitHub: [Ahmet Talha Bektaş](https://github.com/ahmettalhabektas)"
+        "- 💻 [GitHub](https://github.com/ahmettalhabektas)"
     )
     st.markdown(
-        "- 👨‍💻 Kaggle: [Ahmet Talha Bektaş](https://www.kaggle.com/ahmettalhabektas)"
+        "- 👨‍💻 [Kaggle](https://www.kaggle.com/ahmettalhabektas)"
     )
     st.markdown(
         "Made with 💖 by [Ahmet Talha Bektaş](https://www.linkedin.com/in/ahmet-talha-bekta%C5%9F-056844216)"
@@ -633,18 +633,18 @@ else:
         "Titanic Hayatta Kalma Tahmincisi hakkında herhangi bir sorunuz veya geri bildiriminiz varsa, aşağıdaki iletişim kanalları üzerinden benimle iletişime geçmekten çekinmeyin:"
     )
     st.markdown(
-        "- 📧 Email: [atalhabektas@gmail.com](mailto:atalhabektas@gmail.com)"
+        "- 📧 [Email](mailto:atalhabektas@gmail.com)"
     )
     st.markdown(
-        "- 🔗 LinkedIn: [Ahmet Talha Bektaş](https://www.linkedin.com/in/ahmet-talha-bekta%C5%9F-056844216)"
+        "- 🔗 [LinkedIn](https://www.linkedin.com/in/ahmet-talha-bekta%C5%9F-056844216)"
     )
     st.markdown(
-        "- 💻 GitHub: [Ahmet Talha Bektaş](https://github.com/ahmettalhabektas)"
+        "- 💻 [GitHub](https://github.com/ahmettalhabektas)"
     )
     st.markdown(
-        "- 👨‍💻 Kaggle: [Ahmet Talha Bektaş](https://www.kaggle.com/ahmettalhabektas)"
+        "- 👨‍💻 [Kaggle](https://www.kaggle.com/ahmettalhabektas)"
     )
     st.markdown(
-        "💖 ile oluşturulmuştur: [Ahmet Talha Bektaş](https://www.linkedin.com/in/ahmet-talha-bekta%C5%9F-056844216)"
+        "Ahmet Talha Bektaş tarafından 💖 ile oluşturulmuştur: "
     )
 
