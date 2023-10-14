@@ -30,9 +30,8 @@ st.set_page_config(
 )
 
 # Read the Titanic dataset
-CSV_PATH = "data/titanic.csv"
 #titanic = pd.read_csv(CSV_PATH)
-PATH = Path(__file__).parents[1] / CSV_PATH
+PATH = "https://raw.githubusercontent.com/ahmettalhabektas/Streamlit/master/Titanic_Streamlit/data/titanic.csv"
 titanic = pd.read_csv(PATH)
 
 
