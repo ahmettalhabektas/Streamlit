@@ -5,8 +5,9 @@ import seaborn as sns
 import pandas as pd
 import streamlit as st
 import pickle
-from pathlib import Path
-
+import joblib
+from io import BytesIO
+import requests
 
 # Set the page configuration
 st.set_page_config(
@@ -222,8 +223,8 @@ if lang == "English":
             df[f"Deck_letter_{deck_letter}"] = 1
 
             # Load the model from the pickle file
-            with open('model.pkl', 'rb') as file:
-                model = pickle.load(file)
+            URI = "https://raw.githubusercontent.com/ahmettalhabektas/Streamlit/blob/master/Titanic_Streamlit/model.pkl"
+            model = joblib.load(BytesIO(requests.get(URI).content))
 
             # Make predictions using the loaded model
             predictions = model.predict(df)
@@ -496,8 +497,8 @@ else:
             df[f"Deck_letter_{deck_letter}"] = 1
 
             # Load the model from the pickle file
-            with open('model.pkl', 'rb') as file:
-                model = pickle.load(file)
+            URI = "https://raw.githubusercontent.com/ahmettalhabektas/Streamlit/blob/master/Titanic_Streamlit/model.pkl"
+            model = joblib.load(BytesIO(requests.get(URI).content))
             # Yüklenmiş modeli kullanarak tahminler yapın
             tahminler = model.predict(df)
 
