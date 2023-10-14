@@ -10,7 +10,7 @@ import sklearn
 
 # Set the page configuration
 st.set_page_config(
-    page_title="🚢 Titanic Survival Predictor 🚢",
+    page_title="Titanic Survival Predictor 🚢",
     page_icon="🚢",
     layout="centered",
     initial_sidebar_state="expanded",
