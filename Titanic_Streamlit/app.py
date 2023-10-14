@@ -29,10 +29,8 @@ st.set_page_config(
 
 # Read the Titanic dataset
 CSV_PATH = "./data/titanic.csv"
-if os.path.exists(CSV_PATH) and os.access(CSV_PATH, os.R_OK):
-    titanic = pd.read_csv(CSV_PATH)
-else:
-    st.error(f"File '{CSV_PATH}' not found or cannot be read.")
+titanic = pd.read_csv(CSV_PATH)
+
 
 # Language selection
 lang = st.selectbox("🌐 Please select a language", options=( "🇬🇧 English","🇹🇷 Türkçe"))
