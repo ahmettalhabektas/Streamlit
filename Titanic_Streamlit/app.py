@@ -24,7 +24,7 @@ st.set_page_config(
         - 🔗 My LinkedIn: [Ahmet Talha Bektaş](https://www.linkedin.com/in/ahmet-talha-bekta%C5%9F-056844216)
         - 💻 My GitHub: [Ahmet Talha Bektaş](https://github.com/ahmettalhabektas)
         - 👨‍💻 My Kaggle: [Ahmet Talha Bektaş](https://www.kaggle.com/ahmettalhabektas)
-        Made with 💖 by [Ahmet Talha Bektaş](https://www.linkedin.com/in/ahmet-talha-bekta%C5%9F-056844216)
+        Made with 💖 by Ahmet Talha Bektaş
         """
     }
 )
