@@ -4,8 +4,9 @@ This repository contains a collection of Streamlit applications that I've develo
 
 ## Apps
 
-- **Titanic Survival Predictor** 
-- **More apps are preparing. Stay tuned!!**
+- **Titanic Survival Predictor**
+--- 
+**More apps are preparing. Stay tuned!!**
 ## Prerequisites
 
 Before running the Streamlit applications in this repository, make sure you have the following prerequisites installed:
