@@ -1,62 +1,41 @@
 # Titanic Survival Predictor 🚢
 
-![RMS Titanic](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/St%C3%B6wer_Titanic.jpg/800px-St%C3%B6wer_Titanic.jpg)
+![Titanic](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/St%C3%B6wer_Titanic.jpg/800px-St%C3%B6wer_Titanic.jpg)
+
+Welcome to the Titanic Survival Predictor! This web application uses AI to estimate your chances of survival on the RMS Titanic. Feel free to use this project for educational and entertainment purposes.
+
+## Table of Contents
+- [Introduction](#introduction)
+- [Features](#features)
+- [Usage](#usage)
+- [Data Visualization](#data-visualization)
+- [Contact](#contact)
 
 ## Introduction
-
-Welcome to the Titanic Survival Predictor, an exciting project that combines AI, data visualization, and the legendary story of the RMS Titanic. Whether you're a history enthusiast, a data science enthusiast, or just looking for some fun, this project offers a unique experience.
+The Titanic Survival Predictor is a Streamlit web application that allows users to input various details and predict whether they would have survived if they were passengers on the RMS Titanic. It uses a machine learning model, specifically the Random Forest classification algorithm, to make survival predictions based on passenger information.
 
 ## Features
+- Users can input their personal details, such as name, age, gender, ticket class, number of family members, ticket price, port of embarkation, and deck letter (optional).
+- The application provides a prediction on whether the user would have survived or not.
+- Users can explore data visualizations based on the Titanic dataset to gain insights into how various factors influenced passenger survival.
 
-- **Randomized Adventure:** Feeling adventurous? Use the "Randomizer" feature to get a random passenger profile and find out your fate on the Titanic.
+## Usage
+1. Select your preferred language.
+2. Fill in the form with your personal details.
+3. Click the "Submit" button to see your prediction.
+4. Explore data visualizations by selecting different parameters and clicking the "Create Graphs" button.
+5. Contact the developer for questions or feedback.
 
-- **AI Survival Prediction:** Fill out a form with your details, and the AI model predicts whether you would have survived the Titanic disaster.
-
-- **Data Visualization:** Explore data visualizations that reveal insights into the Titanic dataset. Investigate how factors like passenger class, gender, and age affected survival rates.
-
-## How it Works
-
-The Titanic Survival Predictor uses an AI model based on the Random Forest classification algorithm to predict survival. It considers various passenger attributes, including age, gender, class, and more, to provide an estimate of survival chances.
-
-## Getting Started
-
-
-# Clone the repository:
-```bash
-git clone https://github.com/ahmettalhabektas/Streamlit/tree/master/Titanic%20Streamlit 
-```
-
-
-# Install the required dependencies:
-```bash
-pip install -r requirements.txt
-```
-# Run the Streamlit app:
-```bash
-streamlit run app.py
-```
-# Open your web browser and access the app at `http://localhost:8501`.
-
-## Project Structure
-
-The project structure is organized as follows:
-- `app.py`: The main Streamlit application file.
-- `titanic.csv`: The dataset containing Titanic passenger information.
-- `best_ran_model.pkl`: The trained Random Forest AI model for survival prediction.
-- `alive/` and `dead/`: Image directories for representing survival outcomes.
-- `README.md`: This documentation.
-
-## Contributing
-
-Contributions are welcome! If you have ideas, suggestions, or would like to improve this project, feel free to open issues or submit pull requests.
-
+## Data Visualization
+The application offers various data visualizations, allowing users to explore the relationships between survival and factors like passenger class, gender, age, family members, fare, port of embarkation, and deck letter.
 
 ## Contact
+If you have any questions or feedback about the Titanic Survival Predictor, feel free to contact the developer:
 
-- **Ahmet Talha Bektaş**
-  - Email: [atalhabektas@gmail.com](mailto:atalhabektas@gmail.com)
-  - LinkedIn: [Ahmet Talha Bektaş](https://www.linkedin.com/in/ahmet-talha-bekta%C5%9F-056844216)
-  - GitHub: [Ahmet Talha Bektaş](https://github.com/ahmettalhabektas)
-  - Kaggle: [Ahmet Talha Bektaş](https://www.kaggle.com/ahmettalhabektas)
+- Email: [atalhabektas@gmail.com](mailto:atalhabektas@gmail.com)
+- LinkedIn: [Ahmet Talha Bektaş](https://www.linkedin.com/in/ahmet-talha-bekta%C5%9F-056844216)
+- GitHub: [Ahmet Talha Bektaş](https://github.com/ahmettalhabektas)
+- Kaggle: [Ahmet Talha Bektaş](https://www.kaggle.com/ahmettalhabektas)
 
 Made with 💖 by Ahmet Talha Bektaş
+
