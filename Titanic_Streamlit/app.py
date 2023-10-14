@@ -5,9 +5,8 @@ import seaborn as sns
 import pandas as pd
 import streamlit as st
 import pickle
-import joblib
-from io import BytesIO
 import requests
+import sklearn
 
 # Set the page configuration
 st.set_page_config(
