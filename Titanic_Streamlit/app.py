@@ -513,33 +513,50 @@ else:
 
             image_place = st.empty()
 
+            # Specify the repository and path to the directories
+            repo_owner = "ahmettalhabektas"
+            repo_name = "Streamlit"
+            alive_directory_path = "Titanic_Streamlit/alive"
+            dead_directory_path = "Titanic_Streamlit/dead"
 
+            # Fetch the file lists using the GitHub API
+            def fetch_github_file_list(owner, repo, path):
+                github_api_url = f"https://api.github.com/repos/{owner}/{repo}/contents/{path}"
+                response = requests.get(github_api_url)
+                
+                if response.status_code == 200:
+                    files = [file['name'] for file in response.json() if file['type'] == 'file']
+                    return files
+                else:
+                    st.warning("Failed to fetch file list from GitHub.")
+                    return []
 
-            # Specify the directory where your files are located
-            alive_directory_path = "alive"
-            dead_directory_path = "dead"
+            alive_files = fetch_github_file_list(repo_owner, repo_name, alive_directory_path)
+            dead_files = fetch_github_file_list(repo_owner, repo_name, dead_directory_path)
 
-            # List all files in the directory
-            alive_files = os.listdir(alive_directory_path)
+            image_place = st.empty()
 
-            # Filter files to exclude directories (if any)
-            alive_files = [file for file in alive_files if os.path.isfile(os.path.join(alive_directory_path, file))]
-
-            # List all files in the directory
-            dead_files = os.listdir(dead_directory_path)
-
-            # Filter files to exclude directories (if any)
-            dead_files = [file for file in dead_files if os.path.isfile(os.path.join(dead_directory_path, file))]
-
-
-            if tahminler[0] == 0:
+            if predictions[0] == 0:
                 st.write("🌊 Maalesef! Görünüşe göre cankurtaran botuna yetişemediniz. Ancak unutmayın, hepsi eğlence amaçlı!")
-                chosen_dead_file = os.path.join(dead_directory_path, random.choice(dead_files))
-                image_place.image(chosen_dead_file, width=675)
+                if dead_files:
+                    chosen_dead_file = random.choice(dead_files)
+                    image_url = f"https://raw.githubusercontent.com/{repo_owner}/{repo_name}/master/{dead_directory_path}/{chosen_dead_file}"
+                    image_place.image(image_url, width=675)
+                else:
+                    st.warning("'dead' klasöründe bir dosya bulunamadı.")
+
+            elif predictions[0] == 1:
+                st.write("🎉 Tebrikler! Titanik macerasını sağ salim atlattınız! Şimdi, anlatacak heyecan verici hikayeler hayal edin!")
+                if alive_files:
+                    chosen_alive_file = random.choice(alive_files)
+                    image_url = f"https://raw.githubusercontent.com/{repo_owner}/{repo_name}/master/{alive_directory_path}/{chosen_alive_file}"
+                    image_place.image(image_url, width=675)
+                else:
+                    st.warning("'alive' klasöründe bir dosya bulunamadı.")
+
             else:
-                st.write("🎉 Tebrikler! Titanik macerasını sağ salim atlattınız! Şimdi, anlatacak heyecan verici hikayeler hayal edin!")                
-                chosen_alive_file = os.path.join(alive_directory_path, random.choice(alive_files))
-                image_place.image(chosen_alive_file, width=675)
+                st.warning("Bir problem oluştu lütfen sağ üsteki sekmeden about kısmından benimle iletişime geçin!")
+
 
 
     st.write("Tahmin ediyorum ki Titanic verilerinde gizlenen sırları açığa çıkarmak için sabırsızlanıyorsunuz, öyle değil mi? İşte harika grafiklerle dolu heyecan verici bir veri yolculuğuna hazırlanın!")
