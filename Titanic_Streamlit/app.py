@@ -5,6 +5,8 @@ import seaborn as sns
 import pandas as pd
 import streamlit as st
 import pickle
+from pathlib import Path
+
 
 # Set the page configuration
 st.set_page_config(
@@ -28,8 +30,9 @@ st.set_page_config(
 )
 
 # Read the Titanic dataset
-CSV_PATH = "./data/titanic.csv"
-titanic = pd.read_csv(CSV_PATH)
+CSV_PATH = "data/titanic.csv"
+#titanic = pd.read_csv(CSV_PATH)
+titanic = Path(__file__).parents[1] / CSV_PATH
 
 
 # Language selection
