@@ -28,7 +28,7 @@ st.set_page_config(
 )
 
 # Read the Titanic dataset
-CSV_PATH = "titanic.csv"
+CSV_PATH = "./data/titanic.csv"
 if os.path.exists(CSV_PATH) and os.access(CSV_PATH, os.R_OK):
     titanic = pd.read_csv(CSV_PATH)
 else:
