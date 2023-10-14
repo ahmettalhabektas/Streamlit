@@ -232,8 +232,8 @@ if lang == "English":
             predictions = model.predict(df)
 
             # Specify the directory where your files are located
-            alive_directory_path = "alive"
-            dead_directory_path = "dead"
+            alive_directory_path = "https://raw.githubusercontent.com/ahmettalhabektas/Streamlit/tree/master/Titanic_Streamlit/alive"
+            dead_directory_path = "https://raw.githubusercontent.com/ahmettalhabektas/Streamlit/tree/master/Titanic_Streamlit/dead"
 
             # List all files in the directory
             alive_files = os.listdir(alive_directory_path)
