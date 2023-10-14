@@ -230,46 +230,50 @@ if lang == "English":
 
             # Make predictions using the loaded model
             predictions = model.predict(df)
+            # Specify the repository and path to the directories
+            repo_owner = "ahmettalhabektas"
+            repo_name = "Streamlit"
+            alive_directory_path = "Titanic_Streamlit/alive"
+            dead_directory_path = "Titanic_Streamlit/dead"
 
-            # Specify the directory where your files are located
-            alive_directory_path = "https://raw.githubusercontent.com/ahmettalhabektas/Streamlit/tree/master/Titanic_Streamlit/alive"
-            dead_directory_path = "https://raw.githubusercontent.com/ahmettalhabektas/Streamlit/tree/master/Titanic_Streamlit/dead"
+            # Fetch the file lists using the GitHub API
+            def fetch_github_file_list(owner, repo, path):
+                github_api_url = f"https://api.github.com/repos/{owner}/{repo}/contents/{path}"
+                response = requests.get(github_api_url)
+                
+                if response.status_code == 200:
+                    files = [file['name'] for file in response.json() if file['type'] == 'file']
+                    return files
+                else:
+                    st.warning("Failed to fetch file list from GitHub.")
+                    return []
 
-            # List all files in the directory
-            alive_files = os.listdir(alive_directory_path)
-
-            # Filter files to exclude directories (if any)
-            alive_files = [file for file in alive_files if os.path.isfile(os.path.join(alive_directory_path, file))]
-
-            # List all files in the directory
-            dead_files = os.listdir(dead_directory_path)
-
-            # Filter files to exclude directories (if any)
-            dead_files = [file for file in dead_files if os.path.isfile(os.path.join(dead_directory_path, file))]
+            alive_files = fetch_github_file_list(repo_owner, repo_name, alive_directory_path)
+            dead_files = fetch_github_file_list(repo_owner, repo_name, dead_directory_path)
 
             image_place = st.empty()
 
             if predictions[0] == 0:
                 st.write("🌊 Oh no! It seems you didn't make it to a lifeboat. But remember, it's all in good fun!")
-                chosen_dead_file = os.path.join(dead_directory_path, random.choice(dead_files))
-                image_place.image(chosen_dead_file, width=675)
+                if dead_files:
+                    chosen_dead_file = random.choice(dead_files)
+                    image_url = f"https://raw.githubusercontent.com/{repo_owner}/{repo_name}/master/{dead_directory_path}/{chosen_dead_file}"
+                    image_place.image(image_url, width=675)
+                else:
+                    st.warning("No images found in the 'dead' directory.")
 
-
-
-
-
-                
             elif predictions[0] == 1:
                 st.write("🎉 Congratulations! You've survived the Titanic adventure! Now, imagine the thrilling stories you'd have to tell!")
-                          
-                chosen_alive_file = os.path.join(alive_directory_path, random.choice(alive_files))
-                image_place.image(chosen_alive_file, width=675)
-
-
-
+                if alive_files:
+                    chosen_alive_file = random.choice(alive_files)
+                    image_url = f"https://raw.githubusercontent.com/{repo_owner}/{repo_name}/master/{alive_directory_path}/{chosen_alive_file}"
+                    image_place.image(image_url, width=675)
+                else:
+                    st.warning("No images found in the 'alive' directory.")
 
             else:
-                st.warning("A problem occured")
+                st.warning("A problem occurred")
+
 
 
 
