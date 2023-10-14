@@ -223,8 +223,11 @@ if lang == "English":
             df[f"Deck_letter_{deck_letter}"] = 1
 
             # Load the model from the pickle file
-            URI = "https://raw.githubusercontent.com/ahmettalhabektas/Streamlit/blob/master/Titanic_Streamlit/model.pkl"
-            model = joblib.load(BytesIO(requests.get(URI).content))
+            URI = "https://raw.githubusercontent.com/ahmettalhabektas/Streamlit/master/Titanic_Streamlit/model.pkl"
+            response = requests.get(URI)
+
+            if response.status_code == 200:
+                model = pickle.loads(response.content)
 
             # Make predictions using the loaded model
             predictions = model.predict(df)
@@ -497,8 +500,11 @@ else:
             df[f"Deck_letter_{deck_letter}"] = 1
 
             # Load the model from the pickle file
-            URI = "https://raw.githubusercontent.com/ahmettalhabektas/Streamlit/blob/master/Titanic_Streamlit/model.pkl"
-            model = joblib.load(BytesIO(requests.get(URI).content))
+            URI = "https://raw.githubusercontent.com/ahmettalhabektas/Streamlit/master/Titanic_Streamlit/model.pkl"
+            response = requests.get(URI)
+
+            if response.status_code == 200:
+                model = pickle.loads(response.content)
             # Yüklenmiş modeli kullanarak tahminler yapın
             tahminler = model.predict(df)
 
