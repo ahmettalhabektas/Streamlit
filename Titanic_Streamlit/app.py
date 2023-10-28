@@ -20,10 +20,10 @@ st.set_page_config(
         'About':
         """ ## Welcome to the Titanic Survival Predictor! 🌟
         This app uses AI to estimate your chances of survival on the Titanic. Feel free to contact me if you have any questions or feedback:
-        - 📧 My email: [atalhabektas@gmail.com](mailto:atalhabektas@gmail.com)
-        - 🔗 My LinkedIn: [Ahmet Talha Bektaş](https://www.linkedin.com/in/ahmet-talha-bekta%C5%9F-056844216)
-        - 💻 My GitHub: [Ahmet Talha Bektaş](https://github.com/ahmettalhabektas)
-        - 👨‍💻 My Kaggle: [Ahmet Talha Bektaş](https://www.kaggle.com/ahmettalhabektas)
+        - 📧 [My email](mailto:atalhabektas@gmail.com)
+        - 🔗 [My LinkedIn](https://www.linkedin.com/in/ahmet-talha-bekta%C5%9F-056844216)
+        - 💻 [My GitHub](https://github.com/ahmettalhabektas)
+        - 👨‍💻 [My Kaggle](https://www.kaggle.com/ahmettalhabektas)
         Made with 💖 by Ahmet Talha Bektaş
         """
     }
